@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 
-# Load the pre-trained model
+# Loading the pre-trained model
 with open('model1.pkl', 'rb') as f:
     model = pickle.load(f)
 
@@ -22,10 +22,10 @@ def predict():
     soil_moisture = float(data['soilmoisture'])
     area = float(data['area'])
 
-    # Preprocess the input data (if necessary)
+    # Preprocessing the input data  (if necessary)
     # ...
 
-    # Create input array
+    # Creating input array
     input_data = np.array([[state, district, year, season, crop, temperature, humidity, soil_moisture, area]])
 
     # Make prediction
